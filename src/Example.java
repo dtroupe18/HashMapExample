@@ -28,10 +28,14 @@ public class Example {
         // Iterator is complicated
         Iterator iterator = hashMap.entrySet().iterator();
 
+
+        // since this is a hashMap it will iterate over the keys in a "random" order
         while (iterator.hasNext()) {
             Map.Entry pair = (Map.Entry) iterator.next();
             System.out.println(pair.getKey() + " = " + pair.getValue());
         }
+
+        System.out.println();
 
 
         // for loop is simple
@@ -43,15 +47,21 @@ public class Example {
 
         }
 
+        System.out.println();
+
         // get just the values
         for (Object value : hashMap.values()) {
             System.out.println("Value = " + value);
         }
 
+        System.out.println();
+
         // get just the keys
         for (Integer key: hashMap.keySet()) {
             System.out.println("Key = " + key);
         }
+
+        System.out.println();
 
 
         // Now Let's try a treeMap
@@ -67,8 +77,5 @@ public class Example {
             Map.Entry pair2 = (Map.Entry) it.next();
             System.out.println(pair2.getKey() + " = " + pair2.getValue());
         }
-
-
-
     }
 }
